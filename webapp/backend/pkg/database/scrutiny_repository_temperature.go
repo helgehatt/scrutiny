@@ -14,7 +14,7 @@ import (
 // Temperature Data
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 func (sr *scrutinyRepository) SaveSmartTemperature(ctx context.Context, wwn string, deviceProtocol string, collectorSmartData collector.SmartInfo) error {
-	if len(collectorSmartData.AtaSctTemperatureHistory.Table) > 0 {
+	if false && len(collectorSmartData.AtaSctTemperatureHistory.Table) > 0 {
 
 		for ndx, temp := range collectorSmartData.AtaSctTemperatureHistory.Table {
 			//temp value may be null, we must skip/ignore them. See #393
